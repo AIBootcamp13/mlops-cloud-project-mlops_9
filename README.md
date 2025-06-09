@@ -78,7 +78,7 @@
 <br>
 
 ## 🛠️ 작품 아키텍처
-![이미지 설명](https://ibb.co/XkrSNZGs)
+!(https://ibb.co/XkrSNZGs)
 
 <br>
 
