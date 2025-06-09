@@ -25,7 +25,7 @@
 - 버전 및 이슈관리 : GitHub / Linear / Slack
 - 협업 툴 : GitHub / Linear
 <details>
-  <summary>더 보기</summary>
+  <summary>linear 더 보기</summary>
   <img src="https://github.com/user-attachments/assets/82a832d7-e051-4cda-9205-153d929710b7" \>
   <img src="https://github.com/user-attachments/assets/44123190-1624-47fc-9031-293303d66c8f" \>
 </details>
@@ -99,7 +99,19 @@
 ```
 
 ## 수동 절차 (airflow ssh-connection 설정)
-- ![Image](https://github.com/user-attachments/assets/163eba9c-8867-45a9-81b5-dc68ed345053)
+- 요약
+- 접속할 대상 머신의 pem키를 airflow worker 컨테이너 내부로 복사하고 해당 위치를 airflow 웹 UI에서 설정
+- ssh authorized key 등록 처리
+  - 이 프로젝트는 ec2 비용상 자신에 접속하므로 자신의 pub키를 authorized_keys에 기록
+<details>
+  <summary>ssh 설정 더보기</summary>
+  <img src="https://github.com/user-attachments/assets/05d720fc-f8fc-4194-a182-54e467e93711" \>
+  <img src="https://github.com/user-attachments/assets/163eba9c-8867-45a9-81b5-dc68ed345053" \>
+  <img src="https://github.com/user-attachments/assets/c1968972-5e18-4219-b7a6-9a1d4833b5f0" \>
+  <img src="https://github.com/user-attachments/assets/97bac0de-7c2d-4392-997d-38f9c7af6e1b" \>
+  <img src="https://github.com/user-attachments/assets/e96f9153-81f1-454b-b3c0-13ce3e57fcf9" \>
+  <img src="https://github.com/user-attachments/assets/5c55330d-a94e-41a6-8369-72720d5006f4" \>
+</details>
 
 <br>
 
