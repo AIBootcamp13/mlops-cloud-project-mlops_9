@@ -78,7 +78,7 @@
 <br>
 
 ## 🛠️ 작품 아키텍처
-(https://i.ibb.co/prBJGvkz/mlops-9-drawio-4.png)
+![Image](https://github.com/user-attachments/assets/9e8e5694-c325-4f2b-8da0-edc782931eb1)
 
 <br>
 
