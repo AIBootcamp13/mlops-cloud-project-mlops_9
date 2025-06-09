@@ -104,7 +104,7 @@
   - 이 프로젝트는 ec2 비용상 자신에 접속하므로 자신의 pub키를 authorized_keys에 기록
 - airflow dag 태스크에서 사용하려면 위 UI 설정에서 사용한 ssh_conn_id를 ssh-operator에서 지정
 <details>
-  <summary>ssh 설정 더보기</summary>
+  <summary>ssh 설정 과정 보기 </summary>
   <img src="https://github.com/user-attachments/assets/05d720fc-f8fc-4194-a182-54e467e93711" \>
   <img src="https://github.com/user-attachments/assets/163eba9c-8867-45a9-81b5-dc68ed345053" \>
   <img src="https://github.com/user-attachments/assets/e96f9153-81f1-454b-b3c0-13ce3e57fcf9" \>
@@ -114,10 +114,18 @@
   <img src="https://github.com/user-attachments/assets/5b3f8a05-0410-4875-b554-cef676e8ef04" \>
 </details>
 
+<br />
+
 ## 수동 절차 (ec2: git clone)
 - 클론을 수행할 머신에서 생성한 ssh키를 repo 설정 deploy key를 통해 read 권한과 함께 설정
 
 <br>
+
+## Airflow 파이프라인 설정
+- 덱으로 정의된 모델 학습 파이프라인에서 사용될 환경 설정
+  - 모델 훈련 코드는 별도의 GIT에서 클론하여 호스트의 도커 데몬을 통해 훈련되는 방식
+  - 덱 실행시 PAT 토큰을 입력하여 클론 권한 획득
+![Image](https://github.com/user-attachments/assets/5d3fc3e2-6ad8-4504-b88a-51d84c33b0e7)
 
 ## 💻​ 구현 기능
 ### 기능1
@@ -163,6 +171,16 @@
 #### 해결
 - 로컬에서 train.py를 수동 실행하여 BentoML 모델 저장소에 disease_model을 생성 -> 이후 bentoml build 및 containerize를 통해 새 이미지 생성 후 API 서비스 정상 기동
 
+### 4) Airflow ssh-operator에서 sh 스크립트 호출 이슈
+- airflow ssh operator의 경우 command 명령문이 "...some...script.sh" 처럼 sh로 끝나면 에러 발생 (템플릿으로 인식)
+  - sh 뒤에 공백을 추가해주어야 정상 동작    
+![Image](https://github.com/user-attachments/assets/8f256495-2cf1-4b04-8df2-e3c84ff03b88)
+![Image](https://github.com/user-attachments/assets/ced9ccd1-f104-4f2f-9542-7adb32be27c5)
+
+### 5) Airflow docker-operator host docker daemon 설정 이슈
+- docker-operator의 경우 호스트의 도커 데몬을 사용하기 때문에 적절한 설정이 필요
+- 이를 위해 호스트 머신의 도커 그룹 아이디를 컨테이너 설정에 반영해야 했음
+  - airflow docker compose 설정, Dockerfile, env 참고
 
 <br>
 
