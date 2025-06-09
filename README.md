@@ -26,8 +26,8 @@
 - 협업 툴 : GitHub / Linear
 <details>
   <summary>더 보기</summary>
-  <img src="https://github.com/user-attachments/assets/82a832d7-e051-4cda-9205-153d929710b7" width="300">
-  <img src="https://github.com/user-attachments/assets/44123190-1624-47fc-9031-293303d66c8f" width="300">
+  <img src="https://github.com/user-attachments/assets/82a832d7-e051-4cda-9205-153d929710b7" \>
+  <img src="https://github.com/user-attachments/assets/44123190-1624-47fc-9031-293303d66c8f" \>
 </details>
 
 <br>
