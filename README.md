@@ -77,14 +77,13 @@
 
 <br>
 
-## 🛠️ 작품 아키텍처(필수X)
-- #### _아래 이미지는 예시입니다_
-![이미지 설명](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ub_u88a4MB5Uj-9Eb60VNA.jpeg)
+## 🛠️ 작품 아키텍처
+![이미지 설명](about:blank)
 
 <br>
 
 ## 🚨​ 트러블 슈팅
-### 상황 1) 접근 에러 관련
+### 1) 접근 에러 관련
 #### 상황
 - 초기 Docker 내부 MLflow 호스트명이 잘못 설정되어 API 연결 오류 발생 & 윈도우 ssh 접속 .pem 파일 권한
 - EC2 instance의 스냅샵 이미지(AMI)를 만들어 놓았으나 로컬 컴퓨터로 다운로드 받을 수가 없었음
@@ -92,7 +91,7 @@
 - Docker Compose 내부 네트워크 설정 및 `.env` 수정으로 해결 / cmd 문법으로(powershell & cmd 문법 다름) 인한 권한 변경 성공
 - Docker 컨테이너 이미지와 AWS의 VM 이미지는 본질적인 차이가 있어서 호환이 안됨 -> Docker Image는 컨테이너화된 애플리케이션을 위한 파일 시스템 스냅샷으로, 컨테이너 환경에서 실행되지만, AMI는 가상 머신(VM)을 위한 완전한 운영 체제 이미지로, 가상 머신 환경에서 실행됨
 
-### 상황 2) Airflow Web UI 접속 실패
+### 2) Airflow Web UI 접속 실패
 #### 상황
 - localhost:8080에서 Airflow 접속이 되지 않고, 컨테이너 상태가 계속 Exited (1)로 표시됨
 - 로그 확인 결과 airflow db init이 정상적으로 실행되지 않았고, FERNET_KEY 환경변수 누락으로 인해 기동 실패
@@ -100,8 +99,8 @@
 - .env 파일에 AIRFLOW__CORE__FERNET_KEY를 base64로 생성하여 추가하고, docker-compose.yml에서 해당 환경변수를 인식하도록 설정
 - 이후 docker compose down -v로 초기화 후 up --build로 정상 기동됨
 
-### 상황 3) BentoML 모델 로드 실패
-####설명
+### 3) BentoML 모델 로드 실패
+#### 설명
 - bentoml serve bento_service:svc 실행 시 no Models with name 'disease_model' exist in BentoML store 에러 발생
 - 모델 학습은 Airflow 컨테이너 내부에서 진행되었으나, BentoML 서비스가 참조하는 모델 저장소(/root/bentoml/models)와 분리되어 있었음
 #### 해결
