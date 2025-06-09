@@ -24,6 +24,7 @@
 - 주 언어 : Python / shell
 - 버전 및 이슈관리 : GitHub / Linear / Slack
 - 협업 툴 : GitHub / Linear
+- ![Image](https://github.com/user-attachments/assets/82a832d7-e051-4cda-9205-153d929710b7)
 
 <br>
 
@@ -94,7 +95,7 @@
 ```
 
 ## 수동 절차 (airflow ssh-connection 설정)
-- 
+- ![Image](https://github.com/user-attachments/assets/163eba9c-8867-45a9-81b5-dc68ed345053)
 
 <br>
 
