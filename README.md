@@ -7,7 +7,7 @@
 - 본 프로젝트는 증상 데이터를 기반으로 한 질병 예측 모델을 개발하고, 이를 MLOps 환경 위에서 자동화 및 서빙까지 일관되게 구성하는 것을 목표로 합니다
 
 ### <작품 소개>
-- 팀원들이 협업하여 데이터 처리부터 모델 서빙까지 전 과정을 Docker 기반의 파이프라인으로 구성하였고, MLflow를 통한 실험 추적과 BentoML을 활용한 서빙 기능을 포함합니다
+- 팀원들이 협업하여 데이터 처리부터 모델 서빙까지 전 과정을 Ec2 서버 배포 후 Docker 기반의 파이프라인으로 구성하였고, MLflow를 통한 실험 추적과 BentoML을 활용한 서빙 기능 및 배포 후 모니터링 과정을 포함합니다
 
 <br>
 
@@ -22,8 +22,8 @@
 
 ## 🔨 개발 환경 및 기술 스택
 - 주 언어 : Python
-- 버전 및 이슈관리 : GitHub / Linear
-- 협업 툴 : GitHub / Linear / Notion
+- 버전 및 이슈관리 : GitHub / Linear / Slack
+- 협업 툴 : GitHub / Linear
 
 <br>
 
@@ -47,13 +47,13 @@
 
 ## 💻​ 구현 기능
 ### 기능1
-- 사용자 증상 입력 기반 질병 예측 기능
+- 사용자 증상 입력 기반 질병 예측 기능 (데이터셋 활용)
 
 ### 기능2
-- MLflow를 통한 실험 기록 및 버전 관리
+- MLflow를 통한 실험 기록 및 버전 관리 & Airflow Dag관리 -> BentoML을 통한 모델 서빙
 
 ### 기능3
-- Airflow 기반 자동화 파이프라인
+- Streamlit(UI배포) -> Grafana & Prometheus(모니터링)
 
 <br>
 
@@ -64,13 +64,17 @@
 <br>
 
 ## 🚨​ 트러블 슈팅
-### 1. MLflow experiment 접근 에러
+### 1. 접근 에러
 
 #### 설명
-- 초기 Docker 내부 MLflow 호스트명이 잘못 설정되어 API 연결 오류 발생
-
+- 초기 Docker 내부 MLflow 호스트명이 잘못 설정되어 API 연결 오류 발생 & 윈도우 ssh 접속 .pem 파일 권한
 #### 해결
-- Docker Compose 내부 네트워크 설정 및 `.env` 수정으로 해결
+- Docker Compose 내부 네트워크 설정 및 `.env` 수정으로 해결 / cmd 문법으로(powershell & cmd 문법 다름) 인한 권한 변경 성공
+#### 설명
+- EC2 instance의 스냅샵 이미지(AMI)를 만들어 놓았으나 로컬 컴퓨터로 다운로드 받을 수가 없었음
+#### 해결
+-  Docker 컨테이너 이미지와 AWS의 VM 이미지는 본질적인 차이가 있어서 호환이 안됨 -> Docker Image는 컨테이너화된 애플리케이션을 위한 파일 시스템 스냅샷으로, 컨테이너 환경에서 실행되지만, AMI는 가상 머신(VM)을 위한 완전한 운영 체제 이미지로, 가상 머신 환경에서 실행됨
+
 
 <br>
 
@@ -81,6 +85,4 @@
 <br>
 
 ## 📰​ 참고자료
-- https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning  
-- https://mlflow.org/  
-- https://docs.bentoml.org/  
+- https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning
