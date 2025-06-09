@@ -24,7 +24,10 @@
 - 주 언어 : Python / shell
 - 버전 및 이슈관리 : GitHub / Linear / Slack
 - 협업 툴 : GitHub / Linear
-- ![Image](https://github.com/user-attachments/assets/82a832d7-e051-4cda-9205-153d929710b7)
+<details>
+  <summary>더 보기</summary>
+  ![Image](https://github.com/user-attachments/assets/82a832d7-e051-4cda-9205-153d929710b7)
+</details>
 
 <br>
 
