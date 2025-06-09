@@ -29,18 +29,35 @@
 
 ## 📁 프로젝트 구조
 ```
-├── code
-│   ├── jupyter_notebooks
-│   │   └── model_train.ipynb
-│   └── train.py
-├── docs
-│   ├── pdf
-│   │   └── (Template) [패스트캠퍼스] Upstage AI Lab 1기_그룹 스터디 .pptx
-│   └── paper
-└── input
-    └── data
-        ├── eval
-        └── train
+├── airflow
+│   ├── config
+│   ├── dags
+│   ├── docker-compose.trainer.yaml
+│   ├── docker-compose.yaml
+│   ├── Dockerfile.airflow
+│   ├── Dockerfile.trainer
+│   ├── guide.md
+│   ├── requirements.airflow.txt
+│   └── requirements.trainer.txt
+├── bento-ml
+│   ├── bentos
+│   ├── guide.md
+│   ├── main.py
+│   ├── models
+│   ├── requirements.txt
+├── ec2
+│   └── ...
+├── mlflow
+│   ├── docker-compose.yaml
+│   ├── Dockerfile.mlflow
+│   ├── guide.md
+│   └── requirements.mlflow.txt
+├── monitor
+│   ├── docker-compose.yaml
+│   └── prometheus.yml
+└── webapps
+    ├── disease-classifier
+    └── guide.md
 ```
 
 <br>
