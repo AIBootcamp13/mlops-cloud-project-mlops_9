@@ -8,6 +8,7 @@ LOG_FILE="${BENTO_RUN_DIR}/${PROJECT_NAME}.log"
 BENTO_MODULE_PATH="models.disease_classifier.make_bento:BentoDiseaseClassifier"
 
 # venv 활성화 & run dir 생성
+cd $BENTO_ROOT_DIR
 source .venv/bin/activate
 mkdir -p "$BENTO_RUN_DIR"
 
