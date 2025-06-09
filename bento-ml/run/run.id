@@ -1,0 +1,1 @@
+models.disease_classifier.make_bento:BentoDiseaseClassifier

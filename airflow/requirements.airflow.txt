@@ -1,0 +1,6 @@
+hydra-core   
+tqdm
+omegaconf
+apache-airflow-providers-docker
+apache-airflow-providers-ssh
+

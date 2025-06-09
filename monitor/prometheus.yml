@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+scrape_configs:
+  - job_name: bentoml
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['host.docker.internal:3000']  # BentoML 서비스가 3000번 포트에서 동작할 때

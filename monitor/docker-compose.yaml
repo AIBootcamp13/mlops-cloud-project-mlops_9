@@ -1,0 +1,16 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "4000:3000"  # Grafana 기본 포트(3000)가 BentoML과 겹치므로 4000번으로 매핑
+    depends_on:
+      - prometheus
