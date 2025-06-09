@@ -64,13 +64,16 @@
 
 ## 💻​ 구현 기능
 ### 기능1
-- 사용자 증상 입력 기반 질병 예측 기능 (데이터셋 활용)
+- AWS Ec2 서버 (팀원 접속)
+- 사용자 증상 입력 기반 질병 예측 기능 (데이터셋 csv 활용)
 
 ### 기능2
-- MLflow를 통한 실험 기록 및 버전 관리 & Airflow Dag관리 -> BentoML을 통한 모델 서빙
+- MLflow를 통한 실험 기록 및 버전 관리 & Airflow Dag관리
+- miniIO 버켓 관리 & BentoML을 통한 모델 서빙
 
 ### 기능3
-- Streamlit(UI배포) -> Grafana & Prometheus(모니터링)
+- Streamlit(UI배포) -> 웹페이지에서 병명 & 개인별 증상 확인 가능
+- Grafana & Prometheus(모니터링 툴 활용)
 
 <br>
 
