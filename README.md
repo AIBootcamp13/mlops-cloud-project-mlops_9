@@ -15,8 +15,8 @@
 
 | ![멤버1](https://avatars.githubusercontent.com/u/156163982?v=4) | ![멤버2](https://avatars.githubusercontent.com/u/156163982?v=4) | ![멤버3](https://avatars.githubusercontent.com/u/156163982?v=4) | ![멤버4](https://avatars.githubusercontent.com/u/156163982?v=4) | ![멤버5](https://avatars.githubusercontent.com/u/156163982?v=4) | ![멤버6](https://avatars.githubusercontent.com/u/156163982?v=4) |
 | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: |
-|   [멤버1](https://github.com/yourprofile1)   |   [멤버2](https://github.com/yourprofile2)   |   [멤버3](https://github.com/yourprofile3)   |   [멤버4](https://github.com/yourprofile4)   |   [멤버5](https://github.com/yourprofile5)   |   [멤버6](https://github.com/yourprofile6)   |
-| 팀장, MLOps 담당 | 모델링 및 데이터 전처리 | 프론트엔드 개발 | 데이터 수집 및 EDA | Airflow 파이프라인 설계 | 모델 서빙 및 배포 |
+|   [이정민](https://github.com/yourprofile1)   |   [염창환](https://github.com/yourprofile2)   |   [안진혁](https://github.com/yourprofile3)   |   [이상원](https://github.com/yourprofile4)   |   [정재훈](https://github.com/yourprofile5)   |   [진정](https://github.com/yourprofile6)   |
+| 팀장 | 팀원 | 팀원 | 팀원 | 팀원 | 팀원 |
 
 <br>
 
